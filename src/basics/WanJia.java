@@ -1,16 +1,22 @@
 package basics;
 
+import paidui.PanDing;
+
 public class WanJia {
 
 	WuJiang wujiang;
 	ShenFen shenfen;
 	int zuowei;
-	PingTai pingtai;
+	static PingTai pingtai;
+	
+	PaiDui shoupai;
+	PaiDui zhuangbei;
+	PanDing panding;
 	
 	int dangxianxueliang;
 	
 	
-	public WanJia(WuJiang wujiang, ShenFen shenfen, int zuowei, PingTai pingtai) {
+	public WanJia(WuJiang wujiang, ShenFen shenfen, int zuowei, final PingTai pingtai) {
 		super();
 		this.wujiang = wujiang;
 		this.shenfen = shenfen;
@@ -18,7 +24,72 @@ public class WanJia {
 		this.pingtai = pingtai;
 		dangxianxueliang=getShenFenJiaX()+wujiang.xueliang;
 	}
+	
+	public int getShouPaiShangXian(){
+		return dangxianxueliang;
+	}
+	
+	public void huiHeKaishi(){
+		
+	}
+	
+	public void panDingKaishi(){
+		
+	}
+	
+	public void panDing(){
+		
+	}
+	
+	public void panDingJieShu(){
+		
+	}
+	
+	public void moPaiKaishi(){
+		
+	}
 
+	public void moPai(){
+		
+		if(pingtai.chupaidui.getSize()>=2){
+			shoupai.add(pingtai.chupaidui.pop(2));
+		}else{
+			int i=pingtai.chupaidui.getSize();
+			shoupai.add(pingtai.chupaidui.getAll());
+			pingtai.chupaidui=pingtai.qipaidui.xipai();
+			shoupai.add(pingtai.chupaidui.pop(2-i));
+			pingtai.qipaidui=new PaiDui();
+		}
+	}
+	
+	public void chuPaiKaishi(){
+		
+	}
+	
+	public void chuPai(){
+		
+	}
+	
+	public void chuPaiJieShu(){
+		
+	}
+	
+	public void qiPaiKaishi(){
+		
+	}
+	
+	public void qiPai(){
+		
+	}
+	
+	public void qiPaiJieShu(){
+		
+	}
+	
+	public void huiheJieShu(){
+		
+	}
+	
 	public int getShenFenJiaX(){
 		if(ShenFen.ZG.equals(shenfen)){
 			return 1;
