@@ -5,12 +5,19 @@ import java.util.List;
 
 public class Test {
 	public static void main(String[] args){
-		List<String> l1=new LinkedList<String>();
-		List<String> l2=new LinkedList<String>();
-		l1.add("ABC");
-		l1.add("CBA");
-		l2=l1;
-		l1.clear();
-		System.out.println(l1);
+		A a=new A();
+		B b=new B();
+		A c=new B();
+		System.out.println(a.getClass().getSimpleName());
+		System.out.println(b.getClass().getSimpleName());
+		System.out.println(c.getClass().getSimpleName());
+	}
+	
+	static class A{
+		
+	}
+	
+	static class B extends A{
+		
 	}
 }

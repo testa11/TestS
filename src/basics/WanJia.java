@@ -1,5 +1,9 @@
 package basics;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 import paidui.PanDing;
 
 public class WanJia {
@@ -67,7 +71,28 @@ public class WanJia {
 	}
 	
 	public void chuPai(){
+		printDangQianShouPai();
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		try {
+			String line=br.readLine();
+			while(!line.equals("QUIT")){
+				int i=Integer.valueOf(line);
+				Pai chupai=shoupai.get(i);
+				shoupai.remove(i);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
+	}
+	
+	private void printDangQianShouPai(){
+		String output="";
+		int i=0;
+		for(Pai pai:shoupai.paidui){
+			output+=i+++". "+pai.getName()+" ; ";
+		}
+		System.out.println(output);
 	}
 	
 	public void chuPaiJieShu(){

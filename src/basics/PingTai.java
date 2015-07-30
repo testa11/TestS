@@ -13,24 +13,28 @@ public class PingTai {
 	List<WanJia> list;
 	
 	int ZGIndex;
-	static PaiDui chupaidui;
-	static PaiDui qipaidui;
+	PaiDui chupaidui;
+	PaiDui qipaidui;
 	public PingTai(int i){
 		list=new ArrayList<WanJia>(i);		
 	}
 	
 	public void init(){
 		//TODO init ShouPai, PaiDui
+		chupaidui=new PaiDui();
+		chupaidui.init();
+		qipaidui=new PaiDui();
+		for(WanJia wanjia:list){
+			wanjia.shoupai.add(chupaidui.pop(4));
+		}
 		
 		//TODO init WanJia
 		ZGIndex=0;
+		
 	}
 	
 	public int start(){
 		int i=0;
-		chupaidui=new PaiDui();
-		chupaidui.init();
-		qipaidui=new PaiDui();
 		while(true){
 			WanJia wanjia=list.get(i);
 			//TODO each WanJia wan

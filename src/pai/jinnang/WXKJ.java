@@ -4,4 +4,5 @@ import pai.JinNangPai;
 
 public class WXKJ extends JinNangPai {
 
+
 }

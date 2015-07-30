@@ -4,4 +4,6 @@ import pai.JiBenPai;
 
 public class Shan extends JiBenPai {
 
+
+
 }
