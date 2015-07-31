@@ -8,4 +8,8 @@ public class WuJiang {
 		xueliang=4;
 	}
 	
+	public String getName(){
+		return "BAI BAN";
+	}
+	
 }

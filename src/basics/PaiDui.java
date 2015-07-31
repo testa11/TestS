@@ -73,7 +73,7 @@ public class PaiDui {
 	}
 	
 	public List<Pai> pop(int num){
-		List<Pai> popList=paidui.subList(0, num);
+		List<Pai> popList=new LinkedList<Pai>(paidui.subList(0, num));
 		paidui.removeAll(popList);
 		return popList;
 	}

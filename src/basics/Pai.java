@@ -6,4 +6,11 @@ public class Pai {
 		return this.getClass().getSimpleName();
 	}
 	
+	public Pai requires(){
+		return null;
+	}
+	
+	public void xiaoguo(WanJia wanjia){
+		
+	}
 }
